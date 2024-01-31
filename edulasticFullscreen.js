@@ -27,7 +27,7 @@ async function main() {
   //self preservation code
   let token_list = JSON.parse(localStorage.getItem("tokens"));
   let token = localStorage.getItem(token_list[0]);
-  let user_api = "https://app.edulastic.com/api/user/me";
+  let user_api = "https://assessment.peardeck.com/api/user/me";
   let r = await fetch(user_api, {
     headers: {"Authorization": token}
   });
