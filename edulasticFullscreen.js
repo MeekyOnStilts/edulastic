@@ -1,4 +1,4 @@
-var base_url = "https://raw.githubusercontent.com/ading2210/edulastic-tools/main"
+var base_url = "https://raw.githubusercontent.com/MeekyOnStilts/edulastic/main"
 if (typeof document.dev_env != "undefined") {
   base_url = document.dev_env;
 }
