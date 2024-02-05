@@ -23,7 +23,7 @@ async function main() {
   let url_regex = /https:\/\/assessment\.peardeck\.com.+/;
   if (!url_regex.test(window.location)) {
     alert(`Error: BAD URL.\n\nYou are on "${currentURL}" URL should look like this:\nhttps://assessment.peardeck.com/student/assessment/\n Opening the correct URL now...`);
-   window.open(https://assessment.peardeck.com/student/assessment, '_blank').focus();
+    window.open('www.https://assessment.peardeck.com/home/assignments','_blank'
     return;
   }
 
