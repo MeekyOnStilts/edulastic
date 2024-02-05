@@ -3,6 +3,8 @@ if (typeof document.dev_env != "undefined") {
   base_url = document.dev_env;
 }
 
+let currentURL = location.href
+
 async function get_hash(str) {
   if (!window.TextEncoder || !crypto.subtle.digest) {
     return "";
@@ -20,7 +22,8 @@ async function get_hash(str) {
 async function main() {
   let url_regex = /https:\/\/assessment\.peardeck\.com.+/;
   if (!url_regex.test(window.location)) {
-    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://app.edulastic.com/student/assessment/*\nhttps://app.edulastic.com/home/assignments");
+    alert(`Error: BAD URL.\n\nYou are on "${currentURL}" URL should look like this:\nhttps://assessment.peardeck.com/student/assessment/\n Opening the correct URL now...`);
+   window.open(https://assessment.peardeck.com/student/assessment, '_blank').focus();
     return;
   }
 
